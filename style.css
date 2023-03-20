@@ -277,7 +277,7 @@ a {
 	background: fixed;
 	border: none;
 	background-color: transparent;
-	padding: 4px 8px;
+	padding: 3px 6px;
 	transition: all 0.3s ease 0s;
 	font-size: 13px;
 	font-weight: 600;
@@ -289,5 +289,5 @@ a {
 }
 
 .download-button img {
-	width: 40px;
+	width: 30px;
 }
