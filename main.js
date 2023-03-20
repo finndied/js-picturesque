@@ -1,5 +1,6 @@
 const input = document.getElementById('input')
 const content = document.querySelector('.content')
+const imageNodes = []
 
 document.addEventListener('DOMContentLoaded', function () {
 	loadImg()
@@ -21,17 +22,20 @@ function loadImg() {
 			if (response.ok) return response.json()
 			else alert('Failed to load pictures')
 		})
-
 		.then(data => {
-			const imageNodes = []
 			for (let i = 0; i < data.length; i++) {
-				imageNodes[i] = document.createElement('div')
-				imageNodes[i].className = 'img'
-				imageNodes[i].style.backgroundImage = `url(${data[i].urls.regular})`
-				imageNodes[i].addEventListener('dblclick', function () {
-					window.open(data[i].links.download, '_blank')
-				})
-				content.appendChild(imageNodes[i])
+				imageNodes.push(document.createElement('div'))
+				imageNodes[imageNodes.length - 1].className = 'img'
+				imageNodes[
+					imageNodes.length - 1
+				].style.backgroundImage = `url(${data[i].urls.regular})`
+				imageNodes[imageNodes.length - 1].addEventListener(
+					'dblclick',
+					function () {
+						window.open(data[i].links.download, '_blank')
+					}
+				)
+				content.appendChild(imageNodes[imageNodes.length - 1])
 			}
 		})
 }
