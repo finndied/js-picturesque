@@ -85,6 +85,8 @@ video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: 'Poppins', sans-serif;
+
 }
 
 article,
@@ -121,4 +123,79 @@ q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	background-color: white;
+	position: fixed;
+	top: 0;
+}
+
+.header__logo {
+	margin-right: 30px;
+}
+
+.header__button-create {
+	margin-right: 30px;
+	border-radius: 20px;
+	border: 1px solid #3f0088;
+	background-color: #3f0088;
+	padding: 10px 5px;
+	transition: all 0.3s ease 0s;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+.header__button-create:hover {
+	background-color: #5501b4;
+}
+
+.header__create-link {
+	color: white;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+
+.header__search-input {
+	border-radius: 20px;
+	border: 1px solid #3f0088;
+	outline: 1px solid #3f0088;
+	padding: 11px 20px;
+	width: 1000px;
+}
+
+.header__panel-content {
+	margin-left: 20px;
+	display: flex;
+	gap: 30px;
+}
+
+.header__panel-messages {
+	padding: 2px 4px;
+}
+
+.header__panel-messages:hover {
+	background-color: rgb(236, 235, 235);
+	border-radius: 20px;
+	padding: 2px 4px;
+}
+
+.header__panel-profile {
+	padding: 2px 4px;
+}
+
+.header__panel-profile:hover {
+	background-color: rgb(236, 235, 235);
+	border-radius: 20px;
+	padding: 2px 4px;
+}
+
+.header__panel-params {
+	margin-top: 2px;
 }
