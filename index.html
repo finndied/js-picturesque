@@ -9,7 +9,10 @@
 			href="public/images/favicon.png"
 			type="image/png"
 		/>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="style.css" />
 		<title>Picturesque</title>
 	</head>
@@ -21,13 +24,18 @@
 			<button class="header__button-create">
 				<a href="#" class="header__create-link">Create</a>
 			</button>
-			<form action="" class="header__search">
+			<form class="header__search">
 				<input
 					autocomplete="off"
 					type="text"
-					name="form[]"
+					id="input"
 					placeholder="Search"
 					class="header__search-input"
+				/><img
+					src="public/images/header/search.svg"
+					width="30px"
+					alt=""
+					onclick="loadImg()"
 				/>
 			</form>
 			<div class="header__panel-content">
@@ -41,6 +49,9 @@
 					<img src="public/images/header/arrow-bottom.svg" width="30px" alt=""
 				/></a>
 			</div>
+		</div>
+		<div class="container">
+			<div class="content"></div>
 		</div>
 		<script src="main.js"></script>
 	</body>
