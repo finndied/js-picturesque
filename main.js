@@ -14,12 +14,12 @@ function loadImg() {
 	const url =
 		'https://api.unsplash.com/photos/random/?query=' +
 		input.value +
-		'&count=50&client_id=U2VKzEnY4GaZyw5hCMwOWcRuGU0bA-VevuCa7OMnemM'
+		'&count=50&client_id=rnJocnRoW2yp7l8IjAExsm1Jd6x0XdSEINAp4aPj5fE'
 
 	fetch(url)
 		.then(response => {
 			if (response.ok) return response.json()
-			else alert(response.status)
+			else alert('Failed to load pictures')
 		})
 
 		.then(data => {
