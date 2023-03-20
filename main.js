@@ -29,12 +29,27 @@ function loadImg() {
 				imageNodes[
 					imageNodes.length - 1
 				].style.backgroundImage = `url(${data[i].urls.regular})`
+				const downloadButton = document.createElement('button')
+				downloadButton.className = 'download-button'
+				const downloadIcon = document.createElement('img')
+				downloadIcon.src = 'public/images/pin/download.svg'
+				downloadButton.appendChild(downloadIcon)
+				imageNodes[imageNodes.length - 1].appendChild(downloadButton)
 				imageNodes[imageNodes.length - 1].addEventListener(
-					'dblclick',
+					'mouseenter',
 					function () {
-						window.open(data[i].links.download, '_blank')
+						downloadButton.style.display = 'block'
 					}
 				)
+				imageNodes[imageNodes.length - 1].addEventListener(
+					'mouseleave',
+					function () {
+						downloadButton.style.display = 'none'
+					}
+				)
+				downloadButton.addEventListener('click', function () {
+					window.open(data[i].links.download, '_blank')
+				})
 				content.appendChild(imageNodes[imageNodes.length - 1])
 			}
 		})
